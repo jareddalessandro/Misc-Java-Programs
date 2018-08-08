@@ -10,7 +10,7 @@ public class Server {
         
         try(ServerSocket serverSocket = new ServerSocket(5000)) {
             System.out.println("----- Server Online -----");
-            // Infinte loops that wait for "close"
+            // Infinite loop that wait for "close"
             int id = 0;
             while(true){
                 id++;
