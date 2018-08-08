@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Server {
 
     public static void main(String[] args) {
-        // New comment
+
         try(ServerSocket serverSocket = new ServerSocket(5000)) {
             System.out.println("----- Server Online -----");
             // Infinte loops that wait for "close"
