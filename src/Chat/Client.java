@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.util.function.Consumer;
 
 public class Client extends NetworkConnection{
-	
+
+
 	private String ip;
 	private int port;
 
