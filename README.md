@@ -1,2 +1,2 @@
 # Misc-Java-Programs
-A random collection of Java files
+A collection of mostly unrelated Java packages
