@@ -130,6 +130,21 @@ public class BinaryTreeTest {
         assertTrue(tree.isBST());
     }
 
+    // Doesn't actually test anything, just increases coverage by calling
+    // printTree and traverse methods
+    @Test
+    public void testPrintTraverse() throws Exception {
+        final BinaryTree tree = new BinaryTree();
+        tree.insert(5);
+        tree.insert(6);
+        tree.insert(12);
+        tree.insert(13);
+        tree.insert(14);
+        tree.insert(3);
+        System.out.println("Print and Traverse Results: \n");
+        tree.printTree();
+        tree.traverse();
 
+    }
 
 }
