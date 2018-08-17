@@ -80,25 +80,19 @@ public class ChatApp extends Application {
 	}
 
 	private Server createServer() {
-		return new Server(55555, data -> {
-			Platform.runLater(() -> {
-				
-				//for time
-				Date now = new Date();
-				DateFormat time = DateFormat.getTimeInstance();			
-				
-				messages.appendText(data.toString() + "\n");
-			});
-		});
+		return new Server(55555, data -> Platform.runLater(() -> {
+
+            //for time
+            Date now = new Date();
+            DateFormat time = DateFormat.getTimeInstance();
+
+            messages.appendText(data.toString() + "\n");
+        }));
 	}
 
 	private Client createClient() {
 		return new Client("127.0.0.1", 55555, data -> { // for internal network use internal ip, if over internet use external ip for the server
-			Platform.runLater(() -> {
-
-				
-				messages.appendText(data.toString() + "\n");
-			});
+			Platform.runLater(() -> messages.appendText(data.toString() + "\n"));
 		});
 	}
 	
