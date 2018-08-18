@@ -324,10 +324,9 @@ public class Misc {
     }
 
 
-       // Returns whether or not the amount of available bags which hold
-       // set amounts of weight can be arranged to contain the given amount of
-       // goal weight.
-
+    // Returns whether or not the amount of available bags which hold
+    // set amounts of weight can be arranged to contain the given amount of
+    // goal weight.
     public static boolean canPack(int bigCount, int smallCount, int goal) {
 
         int bigWeight = 5;
@@ -382,17 +381,17 @@ public class Misc {
         }
         // Start at the top, work down, first find a denominator, then determine if its a prime
         // By working at the top, the first we find is the largest
-        for(int i = number; i > 0; i--) {
+        for(int i = number; i > 0; i--){
             if(number % i == 0){
 
                 int counter = 2; // start at 2 (everything is divisible by 1)
-                while(true) {
-                    // If counter iterates up to = i then i is prime
-                    if(counter >= i){
+                while(true){
+                    // If counter iterates up to = i/2 then i is prime
+                    if(counter >= (i/2)){
                         return i;
                     }
                     // If its not a prime move on
-                    else if(i % counter == 0) {
+                    else if(i % counter == 0){
                         break;
                     }
                     else {
